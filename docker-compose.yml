@@ -32,7 +32,7 @@ services:
       - "8072:8071"
     environment:
       - "SPARK_MASTER=spark://spark-master:7077"
-      - SPARK_WORKER_WEBUI_PORT=8071
+      - SPARK_WORKER_WEBUI_PORT=8072
       
   namenode:
     image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
@@ -130,8 +130,9 @@ volumes:
   hadoop_namenode:
   hadoop_datanode:
   hadoop_historyserver:
+  cassandra_data:
 
- networks:
-   default:
-     external:
-       name: bde
+networks:
+  default:
+    external:
+      name: bde

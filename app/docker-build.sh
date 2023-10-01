@@ -1,1 +1,1 @@
-docker build --rm -t bde/spark-app .
+docker build --no-cache --rm -t bde/spark-app .
